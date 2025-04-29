@@ -8,6 +8,7 @@
 /*Tag style*/
 body{
     font-family: var(--font-primary);
+    overflow-x: hidden;
 }
 header{
     display: flex;
