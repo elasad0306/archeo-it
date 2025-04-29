@@ -21,7 +21,6 @@
                 </nav>
             </div>
         </header>
-        <p>Ceci est un test</p>
     </body>
 
 </html>

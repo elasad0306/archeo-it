@@ -2,6 +2,9 @@
     --font-primary: "Josefin Sans";
 
 }
+*{
+    margin: 0;
+}
 /*Tag style*/
 body{
     font-family: var(--font-primary);
@@ -9,12 +12,15 @@ body{
 header{
     display: flex;
     flex-direction: column;
-    column-gap: 10px;
+    column-gap: 20px;
 }
 /*Style of navbar*/
 #logo{
     text-align: center;
     font-size: xx-large;
+    background-color: #7A4B3B;
+    color: white;
+    padding-top: 5px;
 }
 #navbar nav{
     display: flex;
@@ -22,4 +28,7 @@ header{
     justify-content: center;
     align-items: center;
     gap: 100px;
+    color: white;
+    background-color: #7A4B3B;
+    padding: 10px;
 }
