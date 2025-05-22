@@ -27,30 +27,36 @@
 </header>
 <section>
     <div id="register_content">
-        <!--For username!-->
-        <p class="control has-icons-left has-icons-right">
-            <input class="input" type="text" placeholder="Pseudo" id="username"/>
-            <span class="icon is-small is-left">
-                <i class="fa-solid fa-user"></i>
-            </span>
-        </p>
-        <!--For email!-->
-        <p class="control has-icons-left has-icons-right">
-            <input class="input" type="email" placeholder="Email" id="mail"/>
-        <span class="icon is-small is-left">
+        <h1>Archeo-It</h1>
+        <form method="get">
+            <!--For email!-->
+            <p class="control has-icons-left has-icons-right">
+                <input class="input" type="email" placeholder="Email" id="mail"/>
+                <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
         </span>
-        <span class="icon is-small is-right">
+                <span class="icon is-small is-right">
             <i class="fas fa-check"></i>
         </span>
-        </p>
-        <!--For password!-->
-        <p class="control has-icons-left">
-            <input class="input" type="password" placeholder="Password" id="password"/>
-            <span class="icon is-small is-left">
+            </p>
+            <!--For username!-->
+            <p class="control has-icons-left has-icons-right">
+                <input class="input" type="text" placeholder="Pseudo" id="username"/>
+                <span class="icon is-small is-left">
+                <i class="fa-solid fa-user"></i>
+            </span>
+            </p>
+            <!--For password!-->
+            <p class="control has-icons-left">
+                <input class="input" type="password" placeholder="Mot de passe" id="password"/>
+                <span class="icon is-small is-left">
                 <i class="fas fa-lock"></i>
             </span>
-        </p>
+            </p>
+            <!--Button sing in!-->
+            <input type="submit" class="button is-success" value="Se connecter"/>
+        </form>
+
     </div>
 </section>
 

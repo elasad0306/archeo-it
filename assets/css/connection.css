@@ -1,0 +1,21 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section #register_content form {
+  display: flex;
+  flex-direction: column;
+  background: #D9D9D9;
+  width: max-content;
+  height: max-content;
+  padding: 10px;
+  margin-top: 10px;
+  gap: 10px;
+}
+section #register_content form h1 {
+  text-align: center;
+}
+
+/*# sourceMappingURL=connection.css.map */
