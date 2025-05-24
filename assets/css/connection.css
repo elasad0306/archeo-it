@@ -1,21 +1,37 @@
+:root {
+  --bulma-success-h: 210deg;
+  --bulma-success-s: 100%;
+  --bulma-success-l: 50%;
+}
+
 section {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  margin-top: 40px;
 }
-section #register_content form {
+section #content-form {
   display: flex;
   flex-direction: column;
-  background: #D9D9D9;
-  width: max-content;
-  height: max-content;
-  padding: 10px;
-  margin-top: 10px;
-  gap: 10px;
+  gap: 15px;
+  background-color: #F6F1F0;
+  padding: 20px;
+  border-radius: 10px;
 }
-section #register_content form h1 {
-  text-align: center;
+section #content-form a {
+  text-decoration: none;
+  color: #000000;
+}
+section #content-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+section #content-form form #button-submit input {
+  color: white;
 }
 
 /*# sourceMappingURL=connection.css.map */
