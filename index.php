@@ -1,12 +1,15 @@
+<?php
+include 'includes/db.php';
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <?php include 'head.php'; ?>
+        <?php include 'includes/head.php'; ?>
         <title>Accueil</title>
     </head>
 
     <body>
-        <?php include 'header.php';?>
+        <?php include 'includes/header.php';?>
         <section id="home_page">
             <div id="latest_article">
                 <h4>Dernier article</h4>

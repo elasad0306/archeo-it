@@ -4,8 +4,8 @@
     </div>
     <div id="navbar">
         <nav>
-            <a href="index.php">Accueil</a>
-            <a href="discovery.php">Découvertes</a>
+            <a href="../index.php">Accueil</a>
+            <a href="../discovery.php">Chantiers</a>
             <a>Contact</a>
         </nav>
     </div>

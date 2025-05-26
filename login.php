@@ -1,6 +1,10 @@
+<?php
+include 'includes/db.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
-<?php include 'head.php'; ?>
+<?php include 'includes/head.php'; ?>
 <body>
 <section id="">
     <h1>Archeo-It</h1>
