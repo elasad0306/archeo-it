@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <?php require_once 'head.php'; ?>
+    <head>
+        <?php include 'head.php'; ?>
+        <title>Accueil</title>
+    </head>
+
     <body>
-        <header>
-            <div id="logo">
-                <span>Archeo-It</span>
-            </div>
-            <div id="navbar">
-                <nav>
-                    <a href="index.php">Accueil</a>
-                    <a href="discovery.php">Découvertes</a>
-                    <a>Contact</a>
-                </nav>
-            </div>
-        </header>
+        <?php include 'header.php';?>
         <section id="home_page">
             <div id="latest_article">
                 <h4>Dernier article</h4>
