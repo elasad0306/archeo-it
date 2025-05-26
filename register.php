@@ -36,7 +36,7 @@ include 'includes/db.php';
             <div id="button-submit">
                 <input type="submit" value="S'inscrire" class="button is-success">
             </div>
-            <span>Avez vous déja un compte ? <a href="#" style="color: #007EFF">Se connecter</a></span>
+            <span>Avez vous déja un compte ? <a href="login.php" style="color: #007EFF">Se connecter</a></span>
         </form>
     </div>
 </section>

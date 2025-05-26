@@ -30,7 +30,7 @@ include 'includes/db.php';
             <div id="button-submit">
                 <input type="submit" value="Se connecter" class="button is-success">
             </div>
-            <span>Vous ne disposez pas de compte ? <a href="#" style="color: #007EFF">S'inscrire</a></span>
+            <span>Vous ne disposez pas de compte ? <a href="register.php" style="color: #007EFF">S'inscrire</a></span>
         </form>
     </div>
 </section>
