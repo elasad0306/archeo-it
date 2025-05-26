@@ -6,7 +6,7 @@
         <nav>
             <a href="../index.php">Accueil</a>
             <a href="../discovery.php">Chantiers</a>
-            <a>Contact</a>
+            <a href="../contact.php">Contact</a>
         </nav>
     </div>
 </header>
