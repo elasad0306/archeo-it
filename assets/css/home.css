@@ -1,3 +1,4 @@
+
 #home_page{
     display: flex;
     flex-direction: row;
@@ -5,6 +6,8 @@
     padding-top: 15px;
     padding-left: 25px;
     padding-right: 25px;
+    justify-content: space-between;
+    align-items: center;
 }
 #latest_article{
     display: flex;
@@ -22,6 +25,7 @@
 }
 .article{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
