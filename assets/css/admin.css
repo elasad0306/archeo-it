@@ -1,0 +1,31 @@
+a{
+    text-decoration: none;
+    color: #e0e0e0;
+}
+
+#administration-page{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+#menu-band{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: #e0e0e0;
+
+    background-color: #6a4a3a;
+    width: max-content;
+    height: 100vh;
+}
+#menu-band ul{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+#article-information{
+    display: flex;
+    flex-direction: column;
+}
