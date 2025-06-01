@@ -1,14 +1,21 @@
 <?php
-$servername = "localhost";
-$username = "admin_archeo-it"; // votre utilisateur MySQL
-$password = "Archeo-It2025"; // votre mot de passe MySQL
-$dbname = "archeo_it"; // votre nom de base
+$host = 'localhost';
+$username = 'admin_archeo-it';
+$password = 'Archeo-It2025';
+$database = 'archeo-it';
+$charset = 'utf8mb4';
 
-// Création de la connexion
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Vérification de la connexion
-if ($conn->connect_error) {
-    die("La connexion a échoué : " . $conn->connect_error);
+$options = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES => false,
+];
+$dsn = "mysql:host=$host;dbname=$database;charset=$charset;port=3307";
+try {
+    $pdo = new PDO($dsn, $username, $password, $options);
+} catch (\PDOException $e) {
+    throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
+
+
 ?>
