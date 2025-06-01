@@ -2,7 +2,7 @@
 $host = 'localhost';
 $username = 'admin_archeo-it';
 $password = 'Archeo-It2025';
-$database = 'archeo-it';
+$database = 'archeo_it';
 $charset = 'utf8mb4';
 
 $options = [
@@ -10,7 +10,7 @@ $options = [
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     PDO::ATTR_EMULATE_PREPARES => false,
 ];
-$dsn = "mysql:host=$host;dbname=$database;charset=$charset;port=3307";
+$dsn = "mysql:host=$host;dbname=$database;charset=$charset;port=3306";
 try {
     $pdo = new PDO($dsn, $username, $password, $options);
 } catch (\PDOException $e) {
