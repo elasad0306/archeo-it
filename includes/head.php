@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/home.css">
     <link rel="stylesheet" href="../assets/css/connection.css">
-    <link rel="stylesheet" href="../assets/css/discovery.css">
-
     <!--Liens CDN pour fa icons!-->
     <script src="https://kit.fontawesome.com/0cb37bcd4e.js" crossorigin="anonymous"></script>
 </head>
