@@ -1,7 +1,4 @@
 const quill = new Quill('#editor', {
-    modules : {
-        toolbar : '#toolbar-container'
-    },
     theme: 'snow'
 });
 
@@ -21,13 +18,13 @@ articleForm.addEventListener("submit", function (submitting){
     //console.log(fieldHidden)
 
     //Envoie du formulaire vers la base de donnée
-    fetch("../admin/save_publication.php", {
+    fetch("save_publication.php", {
         method: 'POST',
         body: new FormData(this)
     })
         .then(response =>response.text())
         .then(data =>{
-            alert("Article sauvegardé avec succès !")
+            alert(data)
             window.location.href = "/"
         })
         .catch(error =>{

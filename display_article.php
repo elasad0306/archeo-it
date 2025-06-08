@@ -1,0 +1,54 @@
+<?php
+$host = 'localhost';
+$username = 'admin_archeo-it';
+$password = 'Archeo-It2025';
+$database = 'archeo_it';
+$charset = 'utf8mb4';
+
+$options = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES => false,
+];
+$dsn = "mysql:host=$host;dbname=$database;charset=$charset;port=3306";
+try {
+    $pdo = new PDO($dsn, $username, $password, $options);
+} catch (\PDOException $e) {
+    throw new \PDOException($e->getMessage(), (int)$e->getCode());
+}
+
+$id_article = $_GET["id"];
+
+$displayArticle = 'SELECT * FROM publication WHERE id = :id_article';
+$stmt = $pdo->prepare($displayArticle);
+$stmt->execute(['id_article' => $id_article]);
+$article = $stmt->fetch();
+
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<?php include 'includes/head.php'; ?>
+<link rel="stylesheet" href="assets/css/article.css">
+<body>
+<?php include 'includes/header.php'; ?>
+
+
+<section>
+    <article id="article">
+        <!--1.Une balise pour le titre!-->
+        <h1><strong><?= $article['title'] ?></strong></h1>
+        <!--2.Mettre une balise image pour afficher la photo de couverture!-->
+        <img width="390" height="205" src="assets/image/<?= $article['photo']?>" alt="Photo<?= $article['title'] ?>"><br>
+        <!--3.Pour afficher la date de publication!-->
+        <span><em>Publié le  <?= $article['create_at']?></em></span><br>
+
+        <!--4.Balise contenu!-->
+        <div class="content-article">
+            <?= $article['content'] ?>
+        </div>
+
+    </article>
+</section>
+</body>
+
+</html>

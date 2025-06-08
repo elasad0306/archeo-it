@@ -1,0 +1,46 @@
+#article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 180vh;
+    height: auto;
+}
+
+
+#article img{
+    object-fit: contain;
+    width: 170vh;
+    height: auto;
+    margin: auto auto;
+}
+#article span,h1,div{
+    text-align: left;
+
+}
+
+#article h1{
+    text-align: center;
+    font-size: x-large;
+}
+.content-article {
+    background: none !important;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.content-article ul,
+.content-article ol {
+    padding-left: 1.5em;
+    margin: 1em 0;
+}
+.content-article ul {
+    list-style-type: decimal;
+}
+.content-article ol {
+    list-style-type: disc;
+}
+.content-article h3{
+    font-size: xx-large;
+}
