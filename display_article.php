@@ -49,6 +49,7 @@ $article = $stmt->fetch();
 
     </article>
 </section>
+<?php include 'includes/footer.php'; ?>
 </body>
 
 </html>
