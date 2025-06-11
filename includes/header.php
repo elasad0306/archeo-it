@@ -7,6 +7,12 @@
             <a href="../index.php">Accueil</a>
             <a href="../discovery.php">Chantiers</a>
             <a href="../contact.php">Contact</a>
+            <div id="account-icon">
+                <a><i class="fa-solid fa-user"></i></a>
+            </div>
+
+
         </nav>
+
     </div>
 </header>
