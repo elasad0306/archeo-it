@@ -3,9 +3,9 @@
     display: flex;
     flex-direction: row;
     gap: 100px;
-    padding-top: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 15px;
     justify-content: space-between;
     align-items: center;
 }
@@ -13,12 +13,15 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    width: 990px;
+    height: auto;
 }
 
 #other_article{
     display: flex;
     flex-direction: column;
     gap: 15px;
+    bottom: 15px;
 }
 #other_article h4{
     text-align: center;
@@ -30,7 +33,7 @@
     align-items: center;
     text-align: center;
     background-color: #D9D9D9;
-    width: 200px;
+    width: max-content;
     height: 50px;
 }
 

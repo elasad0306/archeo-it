@@ -14,6 +14,7 @@ header{
     display: flex;
     flex-direction: column;
     column-gap: 20px;
+    font-size: x-large;
 }
 /*Style of navbar*/
 #logo{
@@ -23,6 +24,7 @@ header{
     color: white;
     padding-top: 5px;
 }
+
 #navbar nav{
     display: flex;
     flex-direction: row;
@@ -36,4 +38,56 @@ header{
 #navbar nav a{
     text-decoration: none;
     color: white;
+}
+#account-icon {
+    display: flex;
+    flex-direction: row;
+
+    margin-right: 0;
+}
+
+#footer{
+    display: flex;
+    flex-direction: column;
+    background-color:  #7A4B3B;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    color: #e0e0e0;
+}
+
+#footer span{
+    color: #e0e0e0;
+    margin: auto auto;
+}
+#footer #about-us{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#footer #about-us span{
+    font-size: x-large;
+}
+#footer #about-us #contact-information{
+     display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #e0e0e0;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+#footer #about-us #contact-information h1{
+    font-size: xx-large;
+}
+#footer #about-us #questions{
+    margin-bottom: 20px;
+}
+
+#footer #about-us  #social-media{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-right: 40px;
+    margin-bottom: 20px;
 }

@@ -1,12 +1,13 @@
-a{
-    text-decoration: none;
-    color: #e0e0e0;
+*{
+    font-family: "Josefin Sans";
 }
-
 #administration-page{
     display: flex;
     flex-direction: row;
     gap: 25px;
+}
+#administration-page h1{
+    text-align: center;
 }
 #menu-band{
     display: flex;
@@ -25,7 +26,20 @@ a{
     flex-direction: column;
     gap: 25px;
 }
-#article-information{
+#menu-band ul li a{
+    text-decoration: none;
+    color: #e0e0e0;
+}
+
+#card-article{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    column-gap: 10px;
+
+}
+
+.card .action-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
