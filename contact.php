@@ -1,6 +1,3 @@
-<?php
-include 'includes/db.php';
-?>
 
   <!DOCTYPE html>
   <html lang="fr">
@@ -36,9 +33,6 @@ include 'includes/db.php';
       </form>
   </main>
 
-  <footer>
-      <p>Copyright 2025 Archeo-It Tous droits réservés</p>
-  </footer>
-
+<?php include 'includes/footer.php'; ?>
   </body>
   </html>

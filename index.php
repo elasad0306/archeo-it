@@ -19,15 +19,6 @@ try {
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 
-/*if (empty($_SESSION['user'])){
-    $articleLimits = 'SELECT * FROM publication WHERE type = "article" LIMIT 3 ';
-    $stmtArticleLimits = $pdo->query($articleLimits);
-    $articleLimits = $stmtArticleLimits->fetchAll();
-}else{
-    $articleFull = 'SELECT * FROM publication WHERE type = "article" ';
-    $stmtArticleFull = $pdo->query($articleFull );
-    $articlesFull = $stmtArticleFull->fetchAll();
-}*/
 
 if(empty($_SESSION['user'])){
     $article = 'SELECT * FROM publication WHERE type = "article" LIMIT 3 ';
@@ -41,6 +32,7 @@ $articlesFull = $stmtArticleFull->fetchAll();
 <html lang="fr">
     <head>
         <?php include 'includes/head.php'; ?>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
         <title>Accueil</title>
     </head>
     <body>
@@ -57,7 +49,7 @@ $articlesFull = $stmtArticleFull->fetchAll();
                     <a href="display_article.php?id=<?= $latestArticle['id'] ?>">
                     <div class="card-image">
                         <figure class="image is-5by4">
-                            <img width="360" height="205" src="assets/image/<?= $latestArticle['photo']?>"  id="cover-picture" alt="Photo <?= $latestArticle['title']?>" />
+                            <img width="100vh" height="auto" src="assets/image/<?= $latestArticle['photo']?>"  id="cover-picture" alt="Photo <?= $latestArticle['title']?>" />
                         </figure>
                     </div>
                     </a>
@@ -76,22 +68,25 @@ $articlesFull = $stmtArticleFull->fetchAll();
             <div id="other_article">
                 <h4><strong>Autres articles</strong></h4>
                 <?php foreach ($articlesFull as $article):?>
+
                 <div class="article">
-                    <?= $article['title']?>
+                    <a href="display_article.php?id=<?= $article['id'] ?>"><?= $article['title']?></a>
                 </div>
                 <?php endforeach;?>
                 <?php if(empty($_SESSION['user'])):?>
-                <div class="button_connect">
-                    <a class="button is-primary is-dark" href="register.php">S'inscrire </a>
-                    <span>ou</span>
-                    <a class="button is-primary is-dark" href="login.php">Se connecter</a>
-                </div>
+                    <div class="button_connect">
+                        <a class="button is-primary is-dark" href="register.php">S'inscrire </a>
+                        <span>ou</span>
+                        <a class="button is-primary is-dark" href="login.php">Se connecter</a>
+                    </div>
                 <?php else:?>
-                <div>You are connected</div>
+
                 <?php endif; ?>
             </div>
         </section>
     <?php include 'includes/footer.php'; ?>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     </body>
 
 </html>

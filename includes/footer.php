@@ -9,9 +9,8 @@
         <div id="questions">
             <span>Archeo-It</span>
             <ul>
-                <li>Qui sommes nous?</li>
-                <li>FAQ</li>
-                <li>Agenda</li>
+                <li><a href="../faq.php">FAQ</a></li>
+                <li><a href="../events.php">Nos évènements</a></li>
             </ul>
         </div>
 

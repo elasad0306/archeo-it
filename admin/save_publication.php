@@ -25,12 +25,11 @@ if(!empty($_POST['title']) && !empty($_POST['type']) && !empty($_POST['content']
     $content = ($_POST['content']);
     $img = htmlspecialchars($_FILES["photo"]["name"]);
     $savePublication = 'INSERT INTO publication (title, photo, type, content, create_at) VALUES (:title, :photo, :type, :content, NOW())';
-    $req = $pdo->prepare($savePublication);
-    $req->execute([':title' => $title, ':photo' => $img, ':type' => $type, ':content' => $content ]);
+    $prepareSaving = $pdo->prepare($savePublication);
+    $prepareSaving->execute([':title' => $title, ':photo' => $img, ':type' => $type, ':content' => $content ]);
 
 
-    if($req){
-        header('Location: ../index.php');
+    if($prepareSaving){
         echo "Article ajouté";
     }
 } else {

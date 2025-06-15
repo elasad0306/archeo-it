@@ -1,5 +1,13 @@
 const quill = new Quill('#editor', {
-    theme: 'snow'
+    modules : {
+        toolbar:"#toolbar-container"
+
+    },
+    theme: 'snow',
+    styles: {
+        background: false,
+        color: false
+    }
 });
 
 const articleForm = document.getElementById("article-form")
@@ -8,6 +16,7 @@ articleForm.addEventListener("submit", function (submitting){
     submitting.preventDefault()
     //Pour récupérer le contenu de l'éditeur en html
     const contentEditor = quill.root.innerHTML
+
     //console.log(contentEditor)
 
     const fieldHidden = document.getElementById("content")
@@ -18,16 +27,19 @@ articleForm.addEventListener("submit", function (submitting){
     //console.log(fieldHidden)
 
     //Envoie du formulaire vers la base de donnée
-    fetch("save_publication.php", {
-        method: 'POST',
-        body: new FormData(this)
-    })
-        .then(response =>response.text())
-        .then(data =>{
-            alert(data)
-            window.location.href = "/"
+    try{
+        fetch("../admin/save_publication.php", {
+            method: 'POST',
+            body: new FormData(this)
         })
-        .catch(error =>{
-            console.log(error)
-        })
+            .then(response =>response.text())
+            .then(data =>{
+                alert(data)
+                window.location.href = "/"
+            })
+
+    }
+    catch(error){
+        console.log(error)
+    }
 })

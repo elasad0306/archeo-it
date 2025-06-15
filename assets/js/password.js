@@ -1,26 +1,41 @@
+const generatePassword = document.getElementById("button-generate")
 
-function generatePassword(){
-    const numberOfCharacter = document.getElementById("numberofcharacter").value
-    const typeOfCharacter = document.getElementById("type-of-password").value
+generatePassword.addEventListener("click", function (){
+    const sizeOfPassword = parseInt(document.getElementById("number-of-character").value)
+    const complexityOfPassword = document.getElementById("type-of-password").value
+
+    //console.log(complexityOfPassword)
+
+    let optionOfPassword = {
+        size: sizeOfPassword,
+        complexity: complexityOfPassword
+    }
 
     try{
-        fetch(' http://127.0.0.1:8000', {
-            method: 'POST',
+        fetch("http://127.0.0.1:8000/password", {
+            method: "POST",
             headers: {
-                "Accept": "application/json",
                 "Content-type": "application/json"
             },
-            body: JSON.stringify({
-                sizeOfPassword : numberOfCharacter,
-
-                typePassword : typeOfCharacter
-            })
-
-        })
-            .then(response => response.json())
-            .then()
-    }catch (error){
+            body: JSON.stringify(optionOfPassword)
+        }).then(response => response.json())
+            .then(data => {
+                let password = data["Password"]
+                document.getElementById("password").value = password
+                console.log(password);
+                //window.location.href = "../register.php"
+            });
+    }
+    catch (error){
         console.log(error)
     }
 
-}
+
+
+
+    //console.log(optionOfPassword)
+
+    //console.log(sizeOfPassword)
+    //console.log(complexityOfPassword)
+})
+

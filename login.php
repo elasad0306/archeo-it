@@ -31,6 +31,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             if($checkPseudo["pseudo"] == $userPseudo){
                 if(password_verify($userPassword, $checkPseudo['password'])){
                     session_start();
+                    $_SESSION['user'] = $userPseudo;
+                    $_SESSION['admin'] = "John59";
                     echo '<script>
                                 alert("Ravi de vous revoir sur Archeo-It '.$userPseudo.' ")
                                 window.location.href = "index.php";

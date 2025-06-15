@@ -55,11 +55,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             </script>";
             exit();
 
-    }echo "<script>
-                 alert('Veuillez remplir tous les champs')
-                 window.location.href = 'register.php';
-            </script>";
-
+    }
 
    }
 

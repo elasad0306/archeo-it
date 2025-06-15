@@ -1,0 +1,41 @@
+:root{
+    --font-primary: "Josefin Sans";
+
+}
+section{
+    font-family: var(--font-primary);
+}
+
+h1{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 500;
+    color: black;
+}
+#article-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vh;
+    gap: 15px;
+}
+
+#editor{
+    width: 100vh;
+}
+#article-information select{
+    width: 100vh;
+}
+#toolbar-container{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.ql-editor ul {
+    list-style-type: disc !important;
+    padding-left: 1.5em !important;
+}
+
+.ql-editor ol {
+    list-style-type: decimal !important;
+    padding-left: 1.5em !important;
+}

@@ -1,0 +1,39 @@
+@media (max-width: 932px) {
+    #logo{
+        display: none;
+    }
+    #navbar{
+        display: none;
+    }
+    #nav-mobile{
+        display: flex;
+        font-family: "Josefin Sans";
+    }
+    #container-fluid{
+        background-color: #6a4a3a;
+    }
+    /*For home page*/
+    #home_page{
+        display: flex;
+        flex-direction: column;
+    }
+    #latest_article{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    /*For article page*/
+    #article{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    #article img{
+        width: auto;
+    }
+
+    #footer{
+        width: auto;
+    }
+    
+}

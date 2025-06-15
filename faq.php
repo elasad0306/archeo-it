@@ -67,7 +67,7 @@
                 <ul>
                     <li>Proposer un site ou un projet à documenter</li>
                     <li>Devenir partenaire de recherche ou de valorisation</li>
-                    <li>Nous contacter via notre formulaire de contact pour toute proposition</li>
+                    <li>Nous contacter via notre <a href="contact.php">formulaire de contact</a> pour toute proposition</li>
                 </ul>
 
 
