@@ -11,12 +11,6 @@ header {
     text-align: center;
 }
 
-
-header h1 {
-    margin: 0;
-    font-size: 5.2em;
-}
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -69,7 +63,7 @@ input, select, textarea {
     text-align: right;
 }
 button {
-    background-color: #6ab06d;
+    background-color: #298929;
     color: white;
     border: none;
     padding: 12px 25px;
