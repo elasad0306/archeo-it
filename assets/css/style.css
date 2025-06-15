@@ -5,6 +5,7 @@
 *{
     margin: 0;
     font-family: "Josefin Sans";
+    overflow-x: hidden;
 }
 /*Tag style*/
 body{
@@ -62,13 +63,12 @@ header{
     column-gap: 15px;
     margin-right: 0;
 }
-#logout{
-    background-color: #F4E1A1;
-}
+
 #footer{
     display: flex;
     flex-direction: column;
     background-color:  #7A4B3B;
+    position: relative;
     bottom: 0;
     width: 100%;
     color: #e0e0e0;

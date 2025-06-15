@@ -31,9 +31,19 @@
     #article img{
         width: auto;
     }
-
+    /*For footer*/
     #footer{
+        bottom: 0;
         width: auto;
     }
-    
+    #footer #about-us{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: auto;
+    }
+    #footer #about-us span{
+        display: none;
+    }
 }

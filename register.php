@@ -44,28 +44,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $userId = $pdo->lastInsertId();
             session_start();
-            $_SESSION['userId'] = $userId;
-            $_SESSION['userName'] = $nameUser;
-            $_SESSION['pseudo'] = $pseudoUser;
-            $_SESSION['email'] = $emailUser;
+            $_SESSION['user'] = $stmtSavingUser;
+            $_SESSION['loggedIn'] = true;
 
             echo "<script>
                 alert('Votre compte a bien été crée ✅')
-                window.location.href = 'index.php';
             </script>";
+            header("Location: index.php");
 
 
     }
 
    }
-
-
-
-
 }
-
-
-
+$pdo = null;
 ?>
 <!DOCTYPE html>
 <html lang="fr">

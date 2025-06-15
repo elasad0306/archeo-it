@@ -18,7 +18,7 @@ if(!empty($_GET['firstname']) && !empty($_GET['name']) && !empty($_GET['mail']) 
         $mail->Port = 2525; // Port utiliser
         // Destinataires
         $mail->setFrom( $_GET['mail']);
-        $mail->addAddress('contact@archeo-it.com' ); // Ajoutez un destinataire
+        $mail->addAddress('contact@archeo-it.fr' ); // Ajoutez un destinataire
         // Contenu
         $mail->isHTML(false); // Définir le format de l'e-mail en HTML
         $mail->Subject = $_GET['subject'];
@@ -38,8 +38,8 @@ if(!empty($_GET['firstname']) && !empty($_GET['name']) && !empty($_GET['mail']) 
   <head>
       <?php include 'includes/head.php'; ?>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Archeo-It - Contact</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
       <link rel="stylesheet" href="assets/css/contact.css">
   </head>
   <body>
@@ -72,5 +72,6 @@ if(!empty($_GET['firstname']) && !empty($_GET['name']) && !empty($_GET['mail']) 
   </main>
 
 <?php include 'includes/footer.php'; ?>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
   </body>
   </html>

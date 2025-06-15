@@ -1,6 +1,6 @@
+
 <?php
 session_start();
-
 $host = 'localhost';
 $username = 'admin_archeo-it';
 $password = 'Archeo-It2025';
@@ -27,6 +27,8 @@ if(empty($_SESSION['user'])){
 }
 $stmtArticleFull = $pdo->query($article);
 $articlesFull = $stmtArticleFull->fetchAll();
+
+$pdo = null;
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -73,7 +75,7 @@ $articlesFull = $stmtArticleFull->fetchAll();
                     <a href="display_article.php?id=<?= $article['id'] ?>"><?= $article['title']?></a>
                 </div>
                 <?php endforeach;?>
-                <?php if(empty($_SESSION['user'])):?>
+                <?php if(empty($_SESSION['loggedIn'])):?>
                     <div class="button_connect">
                         <a class="button is-primary is-dark" href="register.php">S'inscrire </a>
                         <span>ou</span>

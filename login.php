@@ -31,6 +31,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             if($checkPseudo["pseudo"] == $userPseudo){
                 if(password_verify($userPassword, $checkPseudo['password'])){
                     session_start();
+                    $_SESSION['loggedIn'] = true;
                     $_SESSION['user'] = $userPseudo;
                     $_SESSION['admin'] = "John59";
                     echo '<script>
@@ -46,6 +47,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         }
     }
 }
+$pdo = null;
 ?>
 
 <!DOCTYPE html>
