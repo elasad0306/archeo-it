@@ -62,7 +62,9 @@ header{
     column-gap: 15px;
     margin-right: 0;
 }
-
+#logout{
+    background-color: #F4E1A1;
+}
 #footer{
     display: flex;
     flex-direction: column;

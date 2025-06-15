@@ -1,4 +1,6 @@
 # 🍯 Archeo-It
 
-## 🌐 Descritpion 
-Archeo-It est une association spécialisé dans l'archéologie et elle cherche à partager ses découvertes; à faire connaître leur activité au grand public par le biais du numérique.
+## Générateur de mot de passe 
+Pour lancer le générateur de mot de passe en python, voici les pre-requis :
+
+**-Python 3.13.**
