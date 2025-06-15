@@ -1,4 +1,38 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+// Inclure les fichiers PHPMailer
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+$mail = new PHPMailer(true);
+if(!empty($_GET['firstname']) && !empty($_GET['name']) && !empty($_GET['mail']) && !empty($_GET['subject']) && !empty($_GET['message'])){
+    try {
+        // Configuration du serveur SMTP
+        $mail->isSMTP();
+        $mail->Host = 'sandbox.smtp.mailtrap.io'; // Spécifiez votre serveur SMTP
+        $mail->SMTPAuth = true;
+        $mail->Username = '5b2af1703d3e32'; // Adresse e-mail SMTP
+        $mail->Password = 'f351f9c00cd416'; // Mot de passe SMTP
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Activer le chiffrement TLS; `PHPMailer::ENCRYPTION_SMTPS` encouragé
+        $mail->Port = 2525; // Port utiliser
+        // Destinataires
+        $mail->setFrom( $_GET['mail']);
+        $mail->addAddress('contact@archeo-it.com' ); // Ajoutez un destinataire
+        // Contenu
+        $mail->isHTML(false); // Définir le format de l'e-mail en HTML
+        $mail->Subject = $_GET['subject'];
+        $mail->Body = $_GET['message'];
+        $mail->AltBody = 'Ceci est le corps en texte brut pour les clients de messagerie non HTML';
+        $mail->send();
+        echo '<script>alert("Message envoyé")</script>';
+    } catch (Exception $e) {
+        echo "Le message n'a pas pu être envoyé. Erreur de Mailer : {$mail->ErrorInfo}";
+    }
+}
 
+
+?>
   <!DOCTYPE html>
   <html lang="fr">
   <head>
@@ -16,18 +50,18 @@
 
   <main>
       <h2>Nous contacter</h2>
-      <form >
+      <form method="get">
           <div class="form-row">
-              <input type="text" placeholder="Prénom">
-              <input type="text" placeholder="Nom">
-              <input type="text" placeholder="Email">
-              <select>
+              <input type="text" name="firstname" placeholder="Prénom" class="input is-medium">
+              <input type="text" name="name" placeholder="Nom" class="input is-medium">
+              <input type="email" name="mail" placeholder="Email" class="input is-medium">
+              <select name="subject">
                   <option disabled selected>--Sujet de discussion--</option>
-                  <option>Demande d'info</option>
-                  <option>Demande de rendez-vous</option>
-                  <option>Autre</option>
+                  <option value="Demande d'info">Demande d'info</option>
+                  <option value="Demande de rendez-vous">Demande de rendez-vous</option>
+                  <option value="Autre">Autre</option>
               </select>
-              <textarea placeholder="Ecrivez votre message ici..."></textarea>
+              <textarea placeholder="Ecrivez votre message ici..." name="message"></textarea>
               <div class="button-container">
                   <button type="submit">Envoyer</button>
               </div>

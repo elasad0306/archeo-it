@@ -43,7 +43,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmtSavingUser->execute([":email" => $emailUser, ":name" => $nameUser, ":pseudo" => $pseudoUser, "password" => $passwordUser]);
 
             $userId = $pdo->lastInsertId();
-
+            session_start();
             $_SESSION['userId'] = $userId;
             $_SESSION['userName'] = $nameUser;
             $_SESSION['pseudo'] = $pseudoUser;
@@ -53,7 +53,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 alert('Votre compte a bien été crée ✅')
                 window.location.href = 'index.php';
             </script>";
-            exit();
+
 
     }
 

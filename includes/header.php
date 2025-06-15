@@ -13,10 +13,10 @@
         </nav>
         <?php if (!empty($_SESSION['user'])):?>
         <div id="account-icon">
-            <?php if(!empty($_SESSION['admin'])):?>
-            <a href="../admin/admin.php" style="color: white">Espace Admin</a>
+            <?php if(empty($_SESSION['admin'])):?>
+            <a href="includes/logout.php" id="logout"><i class="fa-solid fa-right-from-bracket" style="color: white"></i></a>
             <?php else:?>
-            <a href="includes/logout.php"><i class="fa-solid fa-right-from-bracket" style="color: white"></i></a>
+            <a href="../admin/admin.php" style="color: white">Admin</a>
             <?php endif;?>
         </div>
         <?php else:?>
