@@ -23,6 +23,7 @@
         display: flex;
         flex-direction: column;
         width: auto;
+        padding-top: 45px;
     }
     #other_article{
         display: flex;
@@ -97,6 +98,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-top: 65px;
     }
 
     /*For faq page*/

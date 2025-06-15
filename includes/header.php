@@ -47,6 +47,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="../contact.php">Contact</a>
                         </li>
+                        <?php if (!empty($_SESSION['loggedIn'])):?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="includes/logout.php">Se déconnecter</a>
+                        </li>
+                        <?php endif;?>
                     </ul>
                 </div>
             </div>

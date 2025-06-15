@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../assets/css/home.css">
     <link rel="stylesheet" href="../assets/css/article.css">
     <link rel="stylesheet" href="../assets/css/add_event.css">
+    <link rel="stylesheet" href="../assets/css/discovery.css">
     <link rel="stylesheet" href="../assets/css/contact.css">
     <link rel="stylesheet" href="../assets/css/connection.css">
     <link rel="stylesheet" href="../assets/css/media_screen.css">
