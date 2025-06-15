@@ -19,8 +19,11 @@ form {
     display: flex;
     gap: 20px;
     flex-direction: column;
+    padding: 15px;
 }
-
+select::-webkit-scrollbar {
+    display: none;
+}
 input, select, textarea {
     width: 100%;
     padding: 20px;
@@ -31,6 +34,7 @@ input, select, textarea {
     box-sizing: border-box;
     font-size: 1em;
     font-family: sans-serif;
+
 }
 .button-container {
     text-align: right;

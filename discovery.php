@@ -19,7 +19,7 @@ try {
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 
-$discoveryDisplay = 'SELECT * FROM publication WHERE type = "chantier"';
+$discoveryDisplay = 'SELECT * FROM publication WHERE type = "chantier" ORDER BY create_at DESC';
 $stmtDisplayDiscovery = $pdo->query($discoveryDisplay);
 $discoveries = $stmtDisplayDiscovery->fetchAll();
 
@@ -37,7 +37,7 @@ $discoveries = $stmtDisplayDiscovery->fetchAll();
 <body>
 <?php include "includes/header.php"; ?>
 
-<main>
+<main id="discovery-content">
     <!--Titre de la page !-->
     <h2 class="title is-2" id="title-page">Nos chantiers</h2>
 

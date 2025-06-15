@@ -39,7 +39,7 @@ $article = $stmt->fetch();
 <?php include 'includes/header.php'; ?>
 
 
-<section>
+<section style="padding: 5px">
     <article id="article">
         <!--1.Une balise pour le titre!-->
         <h1><strong><?= $article['title'] ?></strong></h1>
@@ -52,8 +52,8 @@ $article = $stmt->fetch();
         <div class="content-article">
             <?= $article['content'] ?>
         </div>
-
     </article>
+    <a href="index.php" id="button-back" class="button is-primary is-dark">Retour</a>
 </section>
 <?php include 'includes/footer.php'; ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>

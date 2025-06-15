@@ -21,9 +21,9 @@ try {
 
 
 if(empty($_SESSION['user'])){
-    $article = 'SELECT * FROM publication WHERE type = "article" LIMIT 3 ';
+    $article = 'SELECT * FROM publication WHERE type = "article" LIMIT 3 ORDER BY create_at DESC';
 }else{
-    $article = 'SELECT * FROM publication WHERE type = "article" ';
+    $article = 'SELECT * FROM publication WHERE type = "article" ORDER BY create_at DESC';
 }
 $stmtArticleFull = $pdo->query($article);
 $articlesFull = $stmtArticleFull->fetchAll();
@@ -34,6 +34,8 @@ $pdo = null;
 <html lang="fr">
     <head>
         <?php include 'includes/head.php'; ?>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="assets/css/home.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
         <title>Accueil</title>
     </head>
@@ -72,7 +74,7 @@ $pdo = null;
                 <?php foreach ($articlesFull as $article):?>
 
                 <div class="article">
-                    <a href="display_article.php?id=<?= $article['id'] ?>"><?= $article['title']?></a>
+                    <a href="display_article.php?id=<?= $article['id'] ?>"><?= htmlspecialchars_decode(substr($article['title'], 0, 70)).'...'?></a>
                 </div>
                 <?php endforeach;?>
                 <?php if(empty($_SESSION['loggedIn'])):?>

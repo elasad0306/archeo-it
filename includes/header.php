@@ -14,9 +14,9 @@
         <?php if (!empty($_SESSION['loggedIn'])):?>
         <div id="account-icon">
             <?php if(empty($_SESSION['admin'])):?>
-            <a href="includes/logout.php" id="logout"><i class="fa-solid fa-right-from-bracket" style="color: white"></i></a>
+                <a href="../admin/admin.php" style="color: white">Admin</a>
             <?php else:?>
-            <a href="../admin/admin.php" style="color: white">Admin</a>
+                <a href="includes/logout.php" id="logout"><i class="fa-solid fa-right-from-bracket" style="color: white"></i></a>
             <?php endif;?>
         </div>
         <?php else:?>
@@ -33,7 +33,7 @@
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Archeo-It</h5>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="text-align: center;">Archeo-It</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">

@@ -44,3 +44,9 @@
 .content-article h3{
     font-size: xx-large;
 }
+
+#button-back{
+    background-color: #6a4a3a;
+    color: #F4E1A1;
+    text-decoration: none;
+}

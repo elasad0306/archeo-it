@@ -55,7 +55,7 @@ if(!empty($_GET['firstname']) && !empty($_GET['name']) && !empty($_GET['mail']) 
               <input type="text" name="firstname" placeholder="Prénom" class="input is-medium">
               <input type="text" name="name" placeholder="Nom" class="input is-medium">
               <input type="email" name="mail" placeholder="Email" class="input is-medium">
-              <div class="select is-medium">
+              <div class="select">
                   <select name="subject">
                       <option disabled selected>--Sujet de discussion--</option>
                       <option value="Demande d'info">Demande d'info</option>
@@ -63,6 +63,8 @@ if(!empty($_GET['firstname']) && !empty($_GET['name']) && !empty($_GET['mail']) 
                       <option value="Autre">Autre</option>
                   </select>
               </div>
+
+
 
               <textarea placeholder="Ecrivez votre message ici..." name="message" class="textarea"></textarea>
               <div class="button-container">

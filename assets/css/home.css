@@ -22,6 +22,8 @@
     flex-direction: column;
     gap: 15px;
     bottom: 15px;
+    width: max-content;
+    padding: 15px;
 }
 #other_article h4{
     text-align: center;
@@ -32,10 +34,14 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #D9D9D9;
-    width: max-content;
-    height: 50px;
-    padding: 10px;
+    background-color: #FFFFFFFF;
+    border: solid 2px #000000FF;
+    padding: 20px;
+    transition: 1s ease-out;
+
+}
+.article:hover{
+    transform: scale(1.03);
 }
 .article a{
     text-decoration: none;
@@ -51,8 +57,10 @@
 .button_connect a:nth-child(1){
     background-color: #6F4F32;
     color: #FFFF;
+    text-decoration: none;
 }
 .button_connect a:nth-child(3){
     background-color: #F4E1A1;
     color: #000000;
+    text-decoration: none;
 }

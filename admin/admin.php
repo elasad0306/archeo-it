@@ -45,7 +45,7 @@ $posts = $stmt->fetchAll();
     </div>
     <!--Afficher tous les articles qui ont été publier sur le site web!-->
     <div id="all-articles">
-        <span>Les articles publiés</span>
+        <span>Nos publications</span>
         <div id="card-article">
 
 

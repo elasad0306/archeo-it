@@ -1,10 +1,9 @@
 <footer id="footer">
     <section id="about-us">
         <div id="contact-information">
-            <em>Parc Technologique de la Préhistoire
-            24620 Les Eyzies-de-Tayac-Sireuil
-                FRANCE</em>
-            <em>contact@archeo-it.fr</em>
+            Parc Technologique, 24620 Les Eyzies-de-Tayac-Sireuil FRANCE
+            <br>
+            contact@archeo-it.fr
         </div>
         <div id="questions">
             <ul>
