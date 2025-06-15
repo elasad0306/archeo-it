@@ -15,17 +15,38 @@
     #home_page{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
     }
     #latest_article{
         display: flex;
         flex-direction: column;
         width: auto;
     }
+    #other_article{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    #other_article #article{
+        width: auto;
+    }
     /*For article page*/
+    .article-section{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        padding: 7px;
+
+    }
+    #article .content-article{
+        font-size: 1rem;
+    }
     #article{
         display: flex;
         flex-direction: column;
-        width: 100px;
+        width: auto;
     }
     #article img{
         width: auto;
@@ -81,8 +102,30 @@
     /*For faq page*/
     #faq-container{
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-items: center;
+        padding-top: 75px;
         margin: auto auto auto auto;
     }
+    /*For event page*/
+    #event-display{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        padding: 20px;
+    }
+    #line{
+        bottom: 45px;
+        padding-bottom: 5px;
+    }
+    #event-display #information-event{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
 }

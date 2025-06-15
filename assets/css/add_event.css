@@ -16,18 +16,20 @@ h1{
 
 
 /*For event page*/
-hr {
-    border: 0;
+#line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
     width: 300px;
-    height: 2px;
-    background-color: #ccc;
-    margin: auto ;
+    margin: auto;
 }
 
 #event-display{
     display: flex;
     flex-direction: row;
     column-gap: 50px;
+
 }
 #illustration img{
     object-fit: contain;
@@ -44,4 +46,25 @@ hr {
 #information-event h2{
     font-size: x-large;
     font-weight: bold;
+}
+#footer{
+    display: flex;
+    flex-direction: column;
+    background-color:  #7A4B3B;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #e0e0e0;
+}
+@media (max-width: 932px) {
+    #footer{
+        display: flex;
+        flex-direction: column;
+        background-color:  #7A4B3B;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        color: #e0e0e0;
+    }
+
 }

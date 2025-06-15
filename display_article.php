@@ -29,7 +29,7 @@ $article = $stmt->fetch();
 <html lang="fr">
 <head>
     <?php include 'includes/head.php'; ?>
-    <link rel="stylesheet" href="assets/css/article.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 
     <title><?= $article['title']?></title>
@@ -39,7 +39,7 @@ $article = $stmt->fetch();
 <?php include 'includes/header.php'; ?>
 
 
-<section style="padding: 5px">
+<section class="article-section" style="padding: 5px">
     <article id="article">
         <!--1.Une balise pour le titre!-->
         <h1><strong><?= $article['title'] ?></strong></h1>

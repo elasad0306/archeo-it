@@ -21,9 +21,7 @@ form {
     flex-direction: column;
     padding: 15px;
 }
-select::-webkit-scrollbar {
-    display: none;
-}
+
 input, select, textarea {
     width: 100%;
     padding: 20px;

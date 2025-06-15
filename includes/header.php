@@ -13,7 +13,7 @@
         </nav>
         <?php if (!empty($_SESSION['loggedIn'])):?>
         <div id="account-icon">
-            <?php if(empty($_SESSION['admin'])):?>
+            <?php if(!empty($_SESSION['admin'])):?>
                 <a href="../admin/admin.php" style="color: white">Admin</a>
             <?php else:?>
                 <a href="includes/logout.php" id="logout"><i class="fa-solid fa-right-from-bracket" style="color: white"></i></a>
