@@ -1,0 +1,14 @@
+#form-update{
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+    justify-content: center;
+    gap: 15px;
+}
+
+#form-update h1{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 500;
+    color: black;
+}

@@ -1,0 +1,81 @@
+<?php
+session_start();
+$host = 'localhost';
+$username = 'admin_archeo-it';
+$password = 'Archeo-It2025';
+$database = 'archeo_it';
+$charset = 'utf8mb4';
+
+$options = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES => false,
+];
+$dsn = "mysql:host=$host;dbname=$database;charset=$charset;port=3306";
+try {
+    $pdo = new PDO($dsn, $username, $password, $options);
+} catch (\PDOException $e) {
+    throw new \PDOException($e->getMessage(), (int)$e->getCode());
+}
+
+$idArticle = $_GET['id'];
+
+
+$displayArticle = 'SELECT * FROM publication WHERE id = :id_article';
+$stmt = $pdo->prepare($displayArticle);
+$stmt->execute(['id_article' => $idArticle]);
+$article = $stmt->fetch();
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <?php include '../includes/head.php'; ?>
+    <title>Création d'article</title>
+    <link rel="stylesheet" href="../assets/css/update_article.css">
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet">
+</head>
+
+<body>
+
+<section>
+    <form id="form-update" >
+        <input type="hidden" id="id_article" name="id" value="<?=$article['id']?>">
+        <h1>Création d'article</h1>
+        <a href="admin.php" style="text-decoration: none; color: black"><i class="fa-solid fa-arrow-left" style="color: #000000;"></i> Retour</a>
+        <div id="article-information">
+            <!--Champ pour le titre de la publication!-->
+            <label for="title">Titre de la publication</label>
+            <input class="input is-primary" type="text" name="title" id="title" value="<?= $article['title']?>">
+
+        </div>
+
+        <!--Champ pour mettre le contenu!-->
+        <div id="toolbar-container">
+            <select class="ql-header">
+                <option value="1">Titre 1</option>
+                <option value="2">Titre 2</option>
+                <option value="3">Titre 3</option>
+                <option selected>Normal</option>
+            </select>
+            <button class="ql-bold"></button>
+            <button class="ql-italic"></button>
+            <button class="ql-link"></button>
+            <button class="ql-size"></button>
+            <button class="ql-list" value="ordered"></button>
+            <button class="ql-list" value="bullet"></button>
+        </div>
+
+        <div id="editor">
+            <?= $article['content'] ?>
+        </div>
+        <br>
+        <input type="hidden" id="content" name="content">
+
+        <button type="submit" class="button is-primary" id="button-update">Enregister et publier </button>
+    </form>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+<script src="../assets/js/update_article.js">
+</script>
+</body>
+</html>
