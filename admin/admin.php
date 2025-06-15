@@ -21,6 +21,7 @@ try {
 $displayPost = 'SELECT * FROM publication';
 $stmt = $pdo->query($displayPost);
 $posts = $stmt->fetchAll();
+$pdo = null;
 ?>
 
 <!DOCTYPE html>

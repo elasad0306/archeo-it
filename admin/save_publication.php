@@ -35,5 +35,5 @@ if(!empty($_POST['title']) && !empty($_POST['type']) && !empty($_POST['content']
 } else {
     echo "Erreur : " . $_FILES["photo"]["error"];
 }
-
+$pdo = null;
 ?>

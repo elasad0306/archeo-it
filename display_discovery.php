@@ -23,7 +23,7 @@ $displayDiscovery = 'SELECT * FROM publication WHERE id = :id_article';
 $stmt = $pdo->prepare($displayDiscovery);
 $stmt->execute(['id_article' => $id_discovery]);
 $discovery = $stmt->fetch();
-
+$pdo = null;
 ?>
 <!DOCTYPE html>
 <html lang="fr">

@@ -31,7 +31,7 @@ if(!empty($_GET['firstname']) && !empty($_GET['name']) && !empty($_GET['mail']) 
     }
 }
 
-
+$pdo = null;
 ?>
   <!DOCTYPE html>
   <html lang="fr">

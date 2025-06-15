@@ -20,6 +20,7 @@ try {
 $displayEvents = 'SELECT * FROM agendas';
 $stmtEvents = $pdo->query($displayEvents);
 $displayEvents = $stmtEvents->fetchAll();
+$pdo = null;
 ?>
 <!DOCTYPE html>
 <html lang="fr">

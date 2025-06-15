@@ -1,4 +1,5 @@
 <?php
+session_start();
 $host = 'localhost';
 $username = 'admin_archeo-it';
 $password = 'Archeo-It2025';
@@ -26,3 +27,6 @@ echo "<script>
 alert('Article supprimé')
 window.location.href = 'admin.php';
 </script>";
+
+$pdo = null;
+

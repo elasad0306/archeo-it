@@ -25,6 +25,7 @@ $displayArticle = 'SELECT * FROM publication WHERE id = :id_article';
 $stmt = $pdo->prepare($displayArticle);
 $stmt->execute(['id_article' => $idArticle]);
 $article = $stmt->fetch();
+$pdo = null;
 ?>
 <!DOCTYPE html>
 <html lang="fr">

@@ -22,7 +22,7 @@ try {
 $discoveryDisplay = 'SELECT * FROM publication WHERE type = "chantier" ORDER BY create_at DESC';
 $stmtDisplayDiscovery = $pdo->query($discoveryDisplay);
 $discoveries = $stmtDisplayDiscovery->fetchAll();
-
+$pdo = null;
 ?>
 
 <!DOCTYPE html>

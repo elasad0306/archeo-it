@@ -29,5 +29,5 @@ try {
         $prepareSave->execute([':event_name' => $title, ':event_location' => $address, ':start_date' => $event_start, ':end_date' => $event_end, ':information_event' => $other_information]);
         header("Location: add_event.php");
     }
-
+$pdo = null;
 ?>

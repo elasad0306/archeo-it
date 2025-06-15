@@ -34,7 +34,7 @@ if(!empty($_POST['title']) && !empty($_POST['content'])){
 
 
 
-
+$pdo = null;
 
 ?>
 
